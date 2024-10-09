@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "saba/internal/presentation/user"
+	_ "github.com/maadiii/crud/internal/presentation/user"
 
 	"github.com/maadiii/hertz/server"
 )

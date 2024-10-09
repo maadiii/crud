@@ -1,8 +1,8 @@
 package user
 
 import (
-	"saba/pkg/entity"
-	"saba/pkg/usecase"
+	"github.com/maadiii/crud/pkg/entity"
+	"github.com/maadiii/crud/pkg/usecase"
 )
 
 type Create interface {

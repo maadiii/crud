@@ -3,18 +3,20 @@ module github.com/maadiii/crud
 go 1.23.0
 
 require (
-	github.com/maadiii/hertz v1.4.1
+	github.com/maadiii/hertz v1.5.0
 	github.com/maadiii/regorm v0.6.2
 	golang.org/x/crypto v0.28.0
 )
 
 require (
 	github.com/bytedance/go-tagexpr/v2 v2.9.2 // indirect
-	github.com/bytedance/gopkg v0.0.0-20220413063733-65bf48ffb3a7 // indirect
-	github.com/bytedance/sonic v1.8.1 // indirect
-	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
-	github.com/cloudwego/hertz v0.8.1 // indirect
-	github.com/cloudwego/netpoll v0.5.0 // indirect
+	github.com/bytedance/gopkg v0.1.0 // indirect
+	github.com/bytedance/sonic v1.12.0 // indirect
+	github.com/bytedance/sonic/loader v0.2.0 // indirect
+	github.com/cloudwego/base64x v0.1.4 // indirect
+	github.com/cloudwego/hertz v0.9.3 // indirect
+	github.com/cloudwego/iasm v0.2.0 // indirect
+	github.com/cloudwego/netpoll v0.6.2 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
 	github.com/golang/protobuf v1.5.0 // indirect
 	github.com/henrylee2cn/ameda v1.4.10 // indirect

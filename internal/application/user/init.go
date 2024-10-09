@@ -1,8 +1,9 @@
 package user
 
 import (
-	"saba/pkg/usecase/persistence/user"
 	"sync"
+
+	"github.com/maadiii/crud/pkg/usecase/persistence/user"
 )
 
 func Inject(data user.Persistence) {

@@ -2,7 +2,8 @@ package user
 
 import (
 	"context"
-	"saba/pkg/entity"
+
+	"github.com/maadiii/crud/pkg/entity"
 )
 
 type Persistence interface {

@@ -2,8 +2,9 @@ package user
 
 import (
 	"context"
-	"saba/pkg/entity"
-	"saba/pkg/usecase/application/user"
+
+	"github.com/maadiii/crud/pkg/entity"
+	"github.com/maadiii/crud/pkg/usecase/application/user"
 
 	. "github.com/maadiii/regorm"
 )

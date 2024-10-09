@@ -2,7 +2,8 @@ package user
 
 import (
 	"context"
-	"saba/internal/application/user"
+
+	"github.com/maadiii/crud/internal/application/user"
 
 	"github.com/maadiii/hertz/server"
 )
