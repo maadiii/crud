@@ -1,8 +1,7 @@
 package main
 
 import (
-	_ "github.com/maadiii/crud/internal/presentation/user"
-
+	_ "github.com/maadiii/crud/internal/presentation"
 	"github.com/maadiii/hertz/server"
 )
 
