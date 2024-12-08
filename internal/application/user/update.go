@@ -18,14 +18,12 @@ type edit struct {
 }
 
 func (e *edit) Execute(ctx context.Context) (err error) {
-	tx, err = SQL(e.User).
+	err = SQL(e.User).
 		Select("name", "family").
 		Where(
 			EQ("id", e.Id),
 		).
-		UpdateTx(ctx, nil)
-
-	SQL(e.User).SetTx(tx, true).Update(ctx)
+		Update(ctx, nil)
 
 	return
 }
