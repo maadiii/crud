@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/maadiii/crud/internal/application/user"
+	usecase "github.com/maadiii/crud/pkg/usecase/application/user"
 
 	"github.com/maadiii/hertz/server"
 )
@@ -17,10 +18,7 @@ func GetById(ctx context.Context, req *server.Request, in *ReqGetById) (out *Res
 	command := user.GetById().WithId(in.Id)
 	err = command.Execute(ctx)
 
-	out.setId(in.Id).
-		setName(command.Name()).
-		setFamily(command.Family()).
-		withEmail(command.Email())
+	out.mapResponse(command)
 
 	return
 }
@@ -36,26 +34,11 @@ type ResGetById struct {
 	Email  string `json:"email"`
 }
 
-func (r *ResGetById) setId(value int64) *ResGetById {
-	r.Id = value
-
-	return r
-}
-
-func (r *ResGetById) setName(value string) *ResGetById {
-	r.Name = value
-
-	return r
-}
-
-func (r *ResGetById) setFamily(value string) *ResGetById {
-	r.Family = value
-
-	return r
-}
-
-func (r *ResGetById) withEmail(value string) *ResGetById {
-	r.Email = value
-
-	return r
+func (r *ResGetById) mapResponse(command usecase.GetById) *ResGetById {
+	return &ResGetById{
+		Id:     command.Id(),
+		Name:   command.Name(),
+		Family: command.Family(),
+		Email:  command.Email(),
+	}
 }

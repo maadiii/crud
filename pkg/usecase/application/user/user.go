@@ -29,6 +29,7 @@ type GetById interface {
 
 	WithId(int64) GetById
 
+	Id() int64
 	Name() string
 	Family() string
 	Email() string

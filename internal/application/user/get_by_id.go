@@ -29,9 +29,13 @@ func (g *getById) Execute(ctx context.Context) (err error) {
 }
 
 func (g *getById) WithId(value int64) user.GetById {
-	g.Id = value
+	g.User.Id = value
 
 	return g
+}
+
+func (g *getById) Id() int64 {
+	return g.User.Id
 }
 
 func (g *getById) Name() string {

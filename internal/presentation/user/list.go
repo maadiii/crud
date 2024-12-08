@@ -8,6 +8,10 @@ import (
 	"github.com/maadiii/hertz/server"
 )
 
+func init() {
+	server.Register(List)
+}
+
 // [GET] /api/v1/users 200 json
 func List(ctx context.Context, req *server.Request, in *RequestList) (out *ResponseList, err error) {
 	command := user.List().
